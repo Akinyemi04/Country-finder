@@ -1,5 +1,5 @@
 import {configureStore, createSlice} from '@reduxjs/toolkit'
-import { faListUl, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faMoon } from '@fortawesome/free-regular-svg-icons';
 const homeSlice= createSlice({
     name:'Home',

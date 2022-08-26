@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 
 function App() {
   const[value,ispending,error]=useFetch('https://restcountries.com/v3.1/all')
+  const dispatch= useDispatch()
   useEffect(()=>{
     if(value){
     dispatch(Haction.fill(value))
@@ -24,7 +25,6 @@ function App() {
   const style= useSelector((val)=>{return val.Home.color})
   const text = useSelector((val)=>{return val.Home.text})
   const shadow=useSelector((val)=>{return val.Home.box_shadow})
-  const dispatch= useDispatch()
   return (
     <BrowserRouter>
       <div className="App" >

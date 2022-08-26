@@ -68,7 +68,7 @@ const Develop = (props) => {
               )
             }
             else{
-              
+              return(<span style={{display:'none'}}>Gold</span>)
             }
           })
         }
