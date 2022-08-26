@@ -58,7 +58,8 @@ const indexSlice= createSlice({
         search:null,
         region:null,
         display:'none',
-        error:true
+        error:true,
+        vsearch:null
         
     },
     reducers:{
@@ -94,6 +95,13 @@ const indexSlice= createSlice({
             return{
                 ...state,
                 error:false
+            }
+        },
+        change(state,action){
+            return{
+                ...state,
+                vsearch:action.payload
+
             }
         },
         error(state){

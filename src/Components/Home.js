@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux'
 const Home = (props) => {
   const dispatch = useDispatch()
   const region = useSelector((val)=>{return val.index.region})
-  //const background = useSelector((val)=>{return val.Home.color})
+  const searchmobile = useSelector((val)=>{return val.index.vsearch})
   const shadow =useSelector((val)=>{return val.Home.box_shadow})
   const big_background=useSelector((val)=>{return val.Home.background_home})
   const country_bg =useSelector((val)=>{return val.Home.country_color})
@@ -93,7 +93,7 @@ const Home = (props) => {
       return(
         <main>{
           data.map((value,index)=>{
-            //console.log('timer')
+            
             if(value.name.common === searching){
               dispatch(indexer.errorFix())
               return(
@@ -138,12 +138,16 @@ const Home = (props) => {
       <main>
       <header>
         <div style={{backgroundColor:country_bg,color:text}}>
-        <FontAwesomeIcon icon={faMagnifyingGlass} />
+        <span onClick={()=>{
+            dispatch(indexer.search(searchmobile))
+        }}><FontAwesomeIcon icon={faMagnifyingGlass} /></span>
         <input type="text" onKeyDown={(e)=>{
-            if (e.code === 'Enter' || e.code ==='VK_RIGHT'){
+            if (e.code === 'Enter'){
               console.log(e.target.value)
               dispatch(indexer.search(e.target.value))
             } ;
+        }} onChange={(e)=>{
+          dispatch(indexer.change(e.target.value))
         }} style={{backgroundColor:country_bg,color:text}}  className='find'  placeholder='Search For A Country' />
         </div>
         <aside className='aside'>
