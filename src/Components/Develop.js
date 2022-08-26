@@ -29,11 +29,9 @@ const Develop = (props) => {
           props.data[0].map((val,index)=>{
             if(id === val.name.common){
               const data = Object.keys(val.name.nativeName)
-              console.log(data[0])
               dispatch(develop.fill(data[0]))
               const full =Object.keys(val.currencies)
               dispatch(develop.full(full[0]))
-              console.log(val)
               return(
                 <div key={index}>
                   <main key={index}>

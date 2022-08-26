@@ -38,6 +38,7 @@ function App() {
           </aside>
         
         </header>
+        <span style={{display:'none'}}>{error}</span>
       <Routes>
         <Route exact path='/' element={<Home state={ispending}/>}></Route>
         <Route path='/:continent/:id' element={<Develop data={data}/>}></Route>
