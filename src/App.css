@@ -1,38 +1,369 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+.App .header {
+  width: 100vw;
+  box-shadow: 1px 1px 16px rgb(172, 165, 165);
+  padding-top: 2.5vh;
+  height: 10vh;
+  transition: all 0.4s ease-in;
+}
+.App .header .h1 {
+  font-size: larger;
+  margin-left: 5vw;
+  font-weight: 500;
+}
+.App .header .switcher {
+  cursor: pointer;
+  right: 6vw;
+  bottom: 3vh;
+  float: right;
+  height: 4vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  position: relative;
+  flex-wrap: nowrap;
+}
+.App .header .switcher p {
+  margin-left: 0.4vw;
+  display: inline-block;
+  margin-bottom: 0.8vh;
 }
 
-.App-link {
-  color: #61dafb;
+.home {
+  width: 100vw;
+  background-color: rgba(173, 166, 166, 0.05);
+  min-height: 90vh;
 }
-
-@keyframes App-logo-spin {
+.home main {
+  width: 88vw;
+  margin: auto;
+  transform: translatex(3.3vw);
+}
+.home main .pending {
+  margin: auto;
+  padding: 20px;
+  border-radius: 2vw;
+  transform: translatey(20vh);
+  border: 1px solid black;
+  -webkit-animation: state 1s ease infinite alternate;
+          animation: state 1s ease infinite alternate;
+}
+@-webkit-keyframes state {
   from {
-    transform: rotate(0deg);
+    border: 1px solid rgb(24, 17, 17);
+    opacity: 1;
   }
   to {
-    transform: rotate(360deg);
+    border: 2px solid rgb(53, 11, 11);
+    opacity: 0.1;
   }
 }
+@keyframes state {
+  from {
+    border: 1px solid rgb(24, 17, 17);
+    opacity: 1;
+  }
+  to {
+    border: 2px solid rgb(53, 11, 11);
+    opacity: 0.1;
+  }
+}
+.home header {
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.home header div {
+  margin-right: 42vw;
+  margin-left: 3.2vw;
+  padding-left: 1vw;
+  padding-top: 1vh;
+  background-color: white;
+  position: relative;
+  border: 1px solid inherit;
+  box-shadow: 1px 1px 3px grey;
+  width: 25vw;
+  height: 5vh;
+  border-radius: 0.5vw;
+}
+.home header div .find {
+  border: none;
+  margin-top: 0.7vh;
+  margin-left: 1.2vw;
+  position: absolute;
+  top: 0.4vh;
+  left: 2vw;
+  right: 1vw;
+  width: 20vw;
+  height: 3vh;
+}
+.home header div .find:focus {
+  outline: none;
+}
+.home header .aside {
+  margin-top: 1vh;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+}
+.home header .aside p {
+  display: inline-block;
+  padding-left: 1vw;
+  padding-top: 0.5vh;
+  font-size: small;
+  width: 11vw;
+  height: 5vh;
+  border: 1px solid inherit;
+  border-radius: 0.5vw;
+}
+.home header .aside ul {
+  display: none;
+  width: 11vw;
+  z-index: 1;
+  margin-top: 1.2vh;
+  border: 1px solid inherit;
+  position: absolute;
+  top: 8.4vh;
+  border-radius: 0.5vw;
+  flex-direction: column;
+  transition: display 0.4s ease-in;
+}
+.home header .aside ul li {
+  font-size: small;
+  padding-left: 1.3vw;
+  list-style: none;
+}
+.home header .aside ul li:hover {
+  background-color: rgb(209, 196, 196);
+}
+.home main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.home main .country {
+  text-decoration: none;
+  width: 20vw;
+  transition: all 0.4s ease-in;
+  margin-right: 1vw;
+  margin-bottom: 2.5vh;
+  border: 1px solid inherit;
+  box-shadow: 2px 2px 5px grey;
+  border-radius: 0.5vw;
+}
+.home main .country img {
+  width: 20vw;
+  height: 20vh;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.home main .country section {
+  transition: all 0.4s ease-in;
+  background-color: white;
+  height: 20vh;
+  padding-left: 2vh;
+}
+.home main .country section h2 {
+  text-decoration: none;
+  font-size: larger;
+  margin-bottom: 0.5vh;
+}
+.home main .country section p {
+  text-decoration: none;
+  font-size: smaller;
+  font-weight: 600;
+  margin-bottom: 0.3vh;
+}
+.home main .country section p span {
+  font-weight: 400;
+}
+.home main .country:hover {
+  transform: scale(1.1);
+  border-radius: 10vw;
+}
+
+.Develop {
+  position: relative;
+  width: 100vw;
+  min-height: 93vh;
+  margin: auto;
+  transition: background-color 0.4s ease-in;
+}
+.Develop .side {
+  width: 90vw;
+  margin: auto;
+}
+.Develop .button {
+  position: relative;
+  top: 7vh;
+  text-decoration: none;
+  padding: 0.5vh 2vw;
+  background-color: white;
+  border: none;
+  border-radius: 0.4vw;
+  box-shadow: 1px 2px 5px grey;
+}
+.Develop .button span {
+  margin-left: 1vh;
+}
+.Develop .button:hover {
+  opacity: 0.5;
+}
+.Develop main {
+  display: flex;
+  flex-direction: row;
+  transform: translatex(-2vw);
+  margin-top: 15vh;
+}
+.Develop main img {
+  width: 40vw;
+  height: 35vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.Develop main section {
+  margin-left: 1vw;
+  position: relative;
+  padding-top: 3vh;
+}
+.Develop main section h3 {
+  font-size: larger;
+  margin-bottom: 2vh;
+}
+.Develop main section p {
+  font-weight: 600;
+}
+.Develop main section p span {
+  font-weight: 400;
+}
+.Develop main section footer {
+  font-weight: 700;
+  display: flex;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 2vh;
+}
+.Develop main section footer span {
+  font-weight: 500;
+  margin-right: 0.3vw;
+  border: 1px solid inherit;
+  padding: 4px 15px;
+  box-shadow: 1px 2px 6px grey;
+}
+.Develop main aside {
+  padding-top: 9vh;
+  margin-left: 3vw;
+}
+.Develop main aside p {
+  font-weight: 600;
+}
+.Develop main aside p span {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) {
+  .home header .aside P {
+    width: 13vw;
+  }
+  .home header .aside ul {
+    width: 13vw;
+  }
+}
+@media screen and (max-width: 440px) {
+  body {
+    overflow: hidden;
+  }
+  .App .header {
+    height: 7vh;
+    overflow-x: hidden;
+  }
+  .App .header .h1 {
+    font-size: small;
+  }
+  .App .header .switcher p {
+    font-size: small;
+  }
+  .home main {
+    width: 100vw;
+    flex-direction: column;
+  }
+  .home main .country {
+    width: 80vw;
+    margin-left: 3vw;
+  }
+  .home main .country img {
+    width: 80vw;
+    height: 22vh;
+  }
+  .home header {
+    flex-direction: column;
+    width: 100vw;
+  }
+  .home header div {
+    padding-left: 2vw;
+    width: 88vw;
+  }
+  .home header div .find {
+    width: 78vw;
+    margin-left: 3vw;
+    left: 5vw;
+  }
+  .home header .aside {
+    margin-top: 2.6vh;
+    margin-left: 2vw;
+  }
+  .home header .aside p {
+    width: 45vw;
+  }
+  .home header .aside ul {
+    width: 45vw;
+    top: 14vh;
+  }
+  .Develop {
+    min-height: 93vh;
+    overflow-x: hidden;
+  }
+  .Develop .button {
+    top: 2vh;
+  }
+  .Develop main {
+    flex-direction: column;
+    margin-top: 3vh;
+  }
+  .Develop main img {
+    width: 90vw;
+  }
+  .Develop main aside {
+    padding-top: 2vh;
+  }
+  .Develop main section {
+    padding-top: 0;
+    position: static;
+  }
+  .Develop main section footer {
+    position: absolute;
+    bottom: 0vh;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateY(17.5vh);
+  }
+}/*# sourceMappingURL=App.css.map */
