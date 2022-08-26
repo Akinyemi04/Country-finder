@@ -97,7 +97,7 @@ const indexSlice= createSlice({
                 error:false
             }
         },
-        change(state,action){
+        dchange(state,action){
             return{
                 ...state,
                 vsearch:action.payload

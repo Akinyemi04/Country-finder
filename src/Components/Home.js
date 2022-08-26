@@ -147,7 +147,7 @@ const Home = (props) => {
               dispatch(indexer.search(e.target.value))
             } ;
         }} onChange={(e)=>{
-          dispatch(indexer.change(e.target.value))
+          dispatch(indexer.dchange(e.target.value))
         }} style={{backgroundColor:country_bg,color:text}}  className='find'  placeholder='Search For A Country' />
         </div>
         <aside className='aside'>
