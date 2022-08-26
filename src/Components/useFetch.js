@@ -7,12 +7,7 @@ const useFetch = (content)=>{
     useEffect(()=>{
         const abortc= new AbortController()
          fetch(content,
-        // {
-        // signal :abortc.signal,
-        // mode:'cors',
-        // method:'POST',
-        // headers:{'Content-Type': 'application/json'}
-        // }
+       
         )
         .then(res=>{
             if(!res.ok){

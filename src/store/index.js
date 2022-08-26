@@ -113,14 +113,12 @@ const DevelopSlice = createSlice({
     },
     reducers:{
         fill(state,action){
-            console.log(action.payload)
             return{
                 ...state,
                 native:action.payload
             }
         },
         full(state,action){
-            console.log(action.payload)
             return{
                 ...state,
                 currency:action.payload

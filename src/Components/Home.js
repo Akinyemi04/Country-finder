@@ -81,6 +81,9 @@ const Home = (props) => {
             </NavLink>
               )
             }
+            else{
+              return(<span key={index} style={{display:'none'}}>Gold</span>)
+            }
           })
         }
         </main>
@@ -104,6 +107,9 @@ const Home = (props) => {
                 </section>
             </NavLink>
               )
+            }
+            else{
+              return(<span key={index} style={{display:'none'}}>Gold</span>)
             }
             
           })

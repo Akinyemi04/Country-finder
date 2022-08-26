@@ -28,6 +28,7 @@ const Develop = (props) => {
         { props.data !== null &&
           props.data[0].map((val,index)=>{
             if(id === val.name.common){
+              console.log(val)
               const data = Object.keys(val.name.nativeName)
               dispatch(develop.fill(data[0]))
               const full =Object.keys(val.currencies)
@@ -68,7 +69,7 @@ const Develop = (props) => {
               )
             }
             else{
-              return(<span style={{display:'none'}}>Gold</span>)
+              return(<span key={index} style={{display:'none'}}>Gold</span>)
             }
           })
         }

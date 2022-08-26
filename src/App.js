@@ -15,9 +15,8 @@ function App() {
     if(value){
     dispatch(Haction.fill(value))
   }
-  },[value])
+  },[value,dispatch])
   const data  = useSelector((val)=>{return val.Home.data} )
-  console.log(data)
   const mode = useSelector((val)=>{
     return val.Home.mode
   })
