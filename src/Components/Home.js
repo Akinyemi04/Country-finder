@@ -139,12 +139,12 @@ const Home = (props) => {
       <header>
         <div style={{backgroundColor:country_bg,color:text}}>
         <FontAwesomeIcon icon={faMagnifyingGlass} />
-        <input onKeyDown={(e)=>{
+        <input type="search" onKeyDown={(e)=>{
             if (e.code === 'Enter'){
               console.log(e.target.value)
               dispatch(indexer.search(e.target.value))
             } ;
-        }} style={{backgroundColor:country_bg,color:text}}  className='find' type="text" placeholder='Search For A Country' />
+        }} style={{backgroundColor:country_bg,color:text}}  className='find'  placeholder='Search For A Country' />
         </div>
         <aside className='aside'>
           <p onClick={()=>{
