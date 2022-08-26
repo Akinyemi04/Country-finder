@@ -287,15 +287,22 @@ body {
   body {
     overflow: hidden;
   }
+  .App {
+    overflow-y: scroll;
+  }
   .App .header {
     height: 7vh;
     overflow-x: hidden;
+    overflow-y: scroll;
   }
   .App .header .h1 {
     font-size: small;
   }
   .App .header .switcher p {
     font-size: small;
+  }
+  .home {
+    overflow: auto;
   }
   .home main {
     width: 100vw;

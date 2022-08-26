@@ -9,15 +9,10 @@ body{
   overflow-x: hidden;
 }
 .App{
-  //position: fixed;
-  //top: 0;
-  //background-color: $color;
   width: 100vw;
   min-height: 100vh;
   overflow-x:hidden;
-  //overflow-y: scroll;
   .header{
-    //background-color: white;
     width:100vw;
     box-shadow: 1px 1px 16px rgb(172, 165, 165);
     padding-top: 2.5vh;
@@ -302,9 +297,11 @@ body{
     overflow:hidden;
   }
   .App{
+    overflow-y:scroll;
     .header{
       height: 7vh;
       overflow-x: hidden;
+      overflow-y:scroll;
       .h1{
         font-size: small;
       }
@@ -316,6 +313,7 @@ body{
     }
   }
   .home{
+    overflow: auto;
     main{
       width: 100vw;
       flex-direction: column;
