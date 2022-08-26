@@ -18,6 +18,7 @@ const Develop = (props) => {
     const background = useSelector((val)=>{return val.Home.background_home})
     const text = useSelector((val)=>{return val.Home.text})
     const shadow = useSelector((val)=>{return val.Home.develop_shadow})
+    const language = useSelector((val)=>{return val.Develop.language})
   return (
     <div className='Develop' style={{backgroundColor:background}}>
       <aside className='side'>
@@ -28,11 +29,13 @@ const Develop = (props) => {
         { props.data !== null &&
           props.data[0].map((val,index)=>{
             if(id === val.name.common){
-              console.log(val)
+    
               const data = Object.keys(val.name.nativeName)
               dispatch(develop.fill(data[0]))
               const full =Object.keys(val.currencies)
               dispatch(develop.full(full[0]))
+              const dip =Object.keys(val.languages)
+              dispatch(develop.language(dip[0]))
               return(
                 <div key={index}>
                   <main key={index}>
@@ -61,7 +64,7 @@ const Develop = (props) => {
                     <aside>
                       <p style={{color:text}}>  Top Level Domain : <span>{val.tld}</span></p>
                       <p style={{color:text}}>Currencies : <span>{val.currencies[currency].name}</span></p>
-                      <p style={{color:text}}>languages : <span>{val.languages.spa}</span></p>
+                      <p style={{color:text}}>languages : <span>{val.languages[language]}</span></p>
                     </aside>
                   </main>
                   

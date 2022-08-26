@@ -139,7 +139,7 @@ const Home = (props) => {
       <header>
         <div style={{backgroundColor:country_bg,color:text}}>
         <FontAwesomeIcon icon={faMagnifyingGlass} />
-        <input type="search" onKeyDown={(e)=>{
+        <input type="text" onKeyDown={(e)=>{
             if (e.code === 'Enter' || e.code ==='Search' || e.code===84){
               console.log(e.target.value)
               dispatch(indexer.search(e.target.value))

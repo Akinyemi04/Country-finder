@@ -44,7 +44,7 @@ body{
 .home{
   width: 100vw;
   background-color:rgb(173, 166, 166,0.05);
-  //overflow-y: scroll;
+  ////overflow-y: scroll;
   min-height: 90vh;
   main{
     width: 88vw;
@@ -294,10 +294,10 @@ body{
 }
 @media screen and(max-width:'440px') {
   body{
-    overflow:hidden;
+    //overflow:hidden;
   }
   .App{
-    overflow-y:scroll;
+    //overflow-y:scroll;
     .header{
       height: 7vh;
       overflow-x: hidden;
@@ -313,7 +313,7 @@ body{
     }
   }
   .home{
-    overflow: auto;
+    //overflow: auto;
     main{
       width: 100vw;
       flex-direction: column;
@@ -375,8 +375,7 @@ body{
           bottom: 0vh;
           display: flex;
           flex-wrap: wrap;
-          transform: translateY(17.5vh);
-          //white-space: wrap;
+          transform: translateY(13.5vh);
         }
       }
     }

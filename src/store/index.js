@@ -109,7 +109,8 @@ const DevelopSlice = createSlice({
     name:'Develop',
     initialState:{
         native:null,
-        currency:null
+        currency:null,
+        language:null
     },
     reducers:{
         fill(state,action){
@@ -122,6 +123,13 @@ const DevelopSlice = createSlice({
             return{
                 ...state,
                 currency:action.payload
+            }
+        },
+        language(state,action){
+            console.log(action.payload)
+            return{
+                ...state,
+                language:action.payload
             }
         }
     }
