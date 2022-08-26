@@ -140,7 +140,7 @@ const Home = (props) => {
         <div style={{backgroundColor:country_bg,color:text}}>
         <FontAwesomeIcon icon={faMagnifyingGlass} />
         <input type="text" onKeyDown={(e)=>{
-            if (e.code === 'Enter' || e.code ==='ArrowRight' || e.code===84){
+            if (e.code === 'Enter' || e.code ==='VK_RIGHT'){
               console.log(e.target.value)
               dispatch(indexer.search(e.target.value))
             } ;
