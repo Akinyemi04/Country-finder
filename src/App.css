@@ -117,6 +117,7 @@ body {
 }
 .home header div .find:focus {
   outline: none;
+  font-size: 16px;
 }
 .home header .aside {
   margin-top: 1vh;
