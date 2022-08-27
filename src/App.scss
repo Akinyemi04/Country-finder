@@ -94,16 +94,12 @@ body{
         margin-left:1.2vw ;
         position: absolute;
         top: 0.4vh;
-        font-size: 16px;
         left: 2vw;
         right:1vw;
         width:20vw;
         height:3vh ;
       }
-      .find:focus{
-        outline: none;
-        font-size: 16px;
-      }
+      
     }
     .aside{
       margin-top: 1vh;
@@ -295,9 +291,6 @@ body{
   
 }
 @media screen and(max-width:'440px') {
-  body{
-    //overflow:hidden;
-  }
   .App{
     //overflow-y:scroll;
     .header{
@@ -335,10 +328,15 @@ body{
         padding-left: 2vw;
         width:88vw ;
         .find{
+          font-size: 16px;
           width: 78vw;
           margin-left: 3vw;
           left: 5vw;
           //margin: auto;
+        }
+        .find:focus{
+          outline: none;
+          font-size: 16px;
         }
       }
       .aside{
