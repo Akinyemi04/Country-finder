@@ -224,9 +224,11 @@ body{
     margin-top: 15vh;
     img{
       //margin-left: 8vw;
+
       width: 40vw;
       height: 35vh;
-      object-fit: contain;
+      object-fit: cover;
+      aspect-ratio: 3/2;
     }
     section{
       margin-left: 1vw;
@@ -235,6 +237,7 @@ body{
       h3{
         font-size: larger;
         margin-bottom: 2vh;
+        
       }
       p{
         font-weight: 600;

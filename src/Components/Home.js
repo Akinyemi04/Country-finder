@@ -25,6 +25,9 @@ const Home = (props) => {
     const key = e.target
     const action = key.dataset.action
     switch(action){
+      case'All':
+      dispatch(indexer.change(null))
+      break;
       case'Africa':
         dispatch(indexer.change('Africa'))
         break;
@@ -153,8 +156,9 @@ const Home = (props) => {
         <aside className='aside'>
           <p onClick={()=>{
             dispatch(indexer.display())
-          }}style={{backgroundColor:country_bg,color:text}}>Search By Region  <FontAwesomeIcon icon={faAngleDown}/></p>
+          }}style={{backgroundColor:country_bg,color:text}}>Filter By Region  <FontAwesomeIcon icon={faAngleDown}/></p>
           <ul style={{backgroundColor:country_bg,color:text,display:flex}} onClick={navigate}>
+            <li data-action='All'>All</li>
             <li data-action='Africa'>Africa</li>
             <li data-action='America'>America</li>
             <li data-action='Asia'>Asia</li>
