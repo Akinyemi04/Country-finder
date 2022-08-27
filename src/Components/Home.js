@@ -144,7 +144,7 @@ const Home = (props) => {
         <span onClick={()=>{
             dispatch(indexer.search(searchmobile))
         }}><FontAwesomeIcon icon={faMagnifyingGlass} /></span>
-        <input type="text" onKeyDown={(e)=>{
+        <input type="search" onKeyDown={(e)=>{
             if (e.code === 'Enter'){
               console.log(e.target.value)
               dispatch(indexer.search(e.target.value))

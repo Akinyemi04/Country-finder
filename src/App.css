@@ -115,6 +115,9 @@ body {
   width: 20vw;
   height: 3vh;
 }
+.home header div .find:focus {
+  outline: none;
+}
 .home header .aside {
   margin-top: 1vh;
   display: flex;
