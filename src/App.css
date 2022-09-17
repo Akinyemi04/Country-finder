@@ -294,6 +294,9 @@ body {
   .App .header .h1 {
     font-size: small;
   }
+  .App .header .switcher {
+    margin-top: 1.2vh;
+  }
   .App .header .switcher p {
     font-size: small;
   }
