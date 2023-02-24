@@ -134,7 +134,6 @@ const DevelopSlice = createSlice({
             }
         },
         language(state,action){
-            console.log(action.payload)
             return{
                 ...state,
                 language:action.payload
