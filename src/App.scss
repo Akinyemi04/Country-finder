@@ -17,7 +17,7 @@ body{
     box-shadow: 1px 1px 16px rgb(172, 165, 165);
     padding-top: 2.5vh;
     height: 10vh;
-    transition: all 0.4s ease-in;
+    transition: background-color 0.4s ease-in,box-shadow 0.4s ease-in;
     .h1{
       font-size: larger;
       margin-left: 5vw;
@@ -44,7 +44,7 @@ body{
 .home{
   width: 100vw;
   background-color:rgb(173, 166, 166,0.05);
-  ////overflow-y: scroll;
+  transition: background-color 0.4s ease-in;
   min-height: 90vh;
   main{
     width: 88vw;
@@ -297,7 +297,7 @@ body{
   }
   
 }
-@media screen and(max-width:'440px') {
+@media screen and (max-width:'440px') {
   .App{
     //overflow-y:scroll;
     .header{

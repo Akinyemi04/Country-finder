@@ -4,7 +4,6 @@
   box-sizing: border-box;
   -webkit-user-select: initial;
      -moz-user-select: initial;
-      -ms-user-select: initial;
           user-select: initial;
 }
 
@@ -22,7 +21,7 @@ body {
   box-shadow: 1px 1px 16px rgb(172, 165, 165);
   padding-top: 2.5vh;
   height: 10vh;
-  transition: all 0.4s ease-in;
+  transition: background-color 0.4s ease-in, box-shadow 0.4s ease-in;
 }
 .App .header .h1 {
   font-size: larger;
@@ -49,6 +48,7 @@ body {
 .home {
   width: 100vw;
   background-color: rgba(173, 166, 166, 0.05);
+  transition: background-color 0.4s ease-in;
   min-height: 90vh;
 }
 .home main {
@@ -62,18 +62,7 @@ body {
   border-radius: 2vw;
   transform: translatey(20vh);
   border: 1px solid black;
-  -webkit-animation: state 1s ease infinite alternate;
-          animation: state 1s ease infinite alternate;
-}
-@-webkit-keyframes state {
-  from {
-    border: 1px solid rgb(24, 17, 17);
-    opacity: 1;
-  }
-  to {
-    border: 1px solid rgb(53, 11, 11);
-    opacity: 0.1;
-  }
+  animation: state 1s ease infinite alternate;
 }
 @keyframes state {
   from {
