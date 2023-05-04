@@ -16,7 +16,7 @@ const useFetch = (content)=>{
             return res.json()})
         .then(data=>{
             setIsPendding(false)
-            // console.log(data)
+            console.log(data)
             setVal(data)
             setError(null)
         })
