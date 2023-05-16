@@ -187,7 +187,7 @@ body{
       }
     }
     .country:hover{
-      transform: scale(1.1);
+      transform: scale(1.04);
       border-radius: 10vw;
     }
   }
@@ -252,15 +252,12 @@ body{
       footer{
         font-weight: 700;
         display: flex;
-        //flex-wrap: wrap;
         white-space: nowrap ;
         position: absolute;
-       // right: 25vw;
-        bottom: 2vh;
+        bottom: -2vh;
         span{
           font-weight: 500;
           margin-right: 0.3vw;
-          //border: 1px solid inherit;
           padding: 4px 15px ;
           box-shadow: 1px 2px 6px grey;
         }

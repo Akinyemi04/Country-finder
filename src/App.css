@@ -182,7 +182,7 @@ body {
   font-weight: 400;
 }
 .home main .country:hover {
-  transform: scale(1.1);
+  transform: scale(1.04);
   border-radius: 10vw;
 }
 
@@ -246,7 +246,7 @@ body {
   display: flex;
   white-space: nowrap;
   position: absolute;
-  bottom: 2vh;
+  bottom: -2vh;
 }
 .Develop main section footer span {
   font-weight: 500;
